@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'teti';
+  title = 'Angular teszt';
+
+  calcTriangleArea(base:number,height:number){
+    return base * height /2;
+  }
+
+  calcTrianglePerimeter(aSide:number,bSide:number,cSide:number){
+    return aSide + bSide + cSide;
+  }
 }

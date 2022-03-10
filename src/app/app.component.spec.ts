@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
-describe('AppComponent', () => {
+describe('elso angular teszt', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
@@ -10,22 +10,28 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
+  it('az alkamazás létrehozható', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'teti'`, () => {
+  it(`A cím (title) 'teti'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('teti');
+    expect(app.title).toEqual('Angular teszt');
   });
 
-  it('should render title', () => {
+  it('A title generálható', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('teti app is running!');
+    expect(compiled.querySelector('.cím')?.textContent).toContain('Angular teszt');
+  });
+
+  it('háromszög területszámytó metódus teszje',()=>{
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.calcTriangleArea(30,35)).toEqual(525);
   });
 });
